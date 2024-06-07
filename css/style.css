@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+:root {
+    --col-black:#111;
+    --col-white:#fefefe;
+    --col-red: rgb(227, 62, 50);
+
+    --carousel-height: 300px;
+    --corner-round: 15px;
+    --item-padding: 0.5rem;
+    --item-expand-width: 200px;
+}
+
+.koulen-regular {
+    font-family: "Koulen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+body {
+    color: var(--col-white);
+    background-color: var(--col-black);
+    height: 100dvh;
+
+    font-family: "Ibm Plex Mono", serif;
+
+    display: grid;
+    grid-template-rows: 0.1fr 1.2fr 0.1fr;
+}
+
+body>*{
+    padding: 0 10dvw;
+}
+
+header {
+    color: var(--col-black);
+    background-color: var(--col-white);
+}
+
+.flex {
+    display: flex;
+}
+.space-between-center {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel {
+    margin: 20px 0 20px 0;
+    flex-direction: row;
+    gap: 8px;
+    height: var(--carousel-height);
+    justify-content: center;
+}
+
+.item {
+    background-color: var(--col-red);
+    border-radius: var(--corner-round);
+    padding: var(--item-padding);
+    flex:auto;
+    width: 1rem;
+
+    writing-mode: vertical-rl;
+    text-align: end;
+    font-size: 32px;
+    transition: all 1s;
+}
+
+.item:hover {
+    width: 300px;
+}
