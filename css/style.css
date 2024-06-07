@@ -11,10 +11,16 @@
 :root {
     --col-black:#111;
     --col-white:#fefefe;
-    --col-red: rgb(227, 62, 50);
+    --col-red: #E43636;
+    --col-orange: #F84F19;
+    --col-yellow: #F8AC19;
+    --col-green: #81E71B;
+    --col-lblue: #1BB6E7;
+    --col-dblue: #2745E4;
+    --col-purple: #AA17F0;
 
     --carousel-height: 300px;
-    --corner-round: 15px;
+    --corner-round: 30px;
     --item-padding: 0.5rem;
     --item-expand-width: 200px;
 }
@@ -71,9 +77,44 @@ header {
     writing-mode: vertical-rl;
     text-align: end;
     font-size: 32px;
-    transition: all 1s;
+    transition: all 500ms;
 }
 
 .item:hover {
     width: 300px;
+}
+
+.item1 {
+    color: var(--col-yellow);
+    background: var(--col-red);
+}
+
+.item2 {
+    color: var(--col-dblue);
+    background: var(--col-yellow)
+}
+
+.item3 {
+    color: var(--col-white);
+    background: var(--col-lblue)
+}
+
+.item4 {
+    color: var(--col-yellow);
+    background: var(--col-dblue)
+}
+
+.item5 {
+    color: var(--col-purple);
+    background: var(--col-green)
+}
+
+.item6 {
+    color: var(--col-white);
+    background: var(--col-orange)
+}
+
+.item7 {
+    color: var(--col-green);
+    background: var(--col-purple)
 }
