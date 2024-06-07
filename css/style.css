@@ -23,6 +23,7 @@
     --corner-round: 30px;
     --item-padding: 0.5rem;
     --item-expand-width: 200px;
+    --flex-gap: 16px;
 }
 
 .koulen-regular {
@@ -30,6 +31,10 @@
     font-weight: 400;
     font-style: normal;
   }
+
+img {
+max-width: 100%;
+}
 
 body {
     color: var(--col-white);
@@ -58,6 +63,11 @@ a {
 .flex {
     display: flex;
 }
+
+.flex-gap {
+    gap: var(--flex-gap);
+}
+
 .space-between-center {
     justify-content: space-between;
     align-items: center;
@@ -66,27 +76,40 @@ a {
 .carousel {
     margin: 20px 0;
     flex-direction: row;
-    gap: 8px;
     height: var(--carousel-height);
     justify-content: center;
+}
+
+.vertical-text{
+    writing-mode: vertical-rl;
+    text-align: end;
+}
+.item {
+    background-color: var(--col-red);
+    border-radius: var(--corner-round);
+    padding: 1rem var(--item-padding);
+    flex:auto;
+    width: 10%;
+    transition: all 500ms;
+}
+
+.item:hover {
+    width: 300px;
 }
 
 .card {
     background-color: var(--col-red);
     border-radius: var(--corner-round);
-    padding: 1rem var(--item-padding);
+    padding: 3rem 1.5rem;
     flex:auto;
-    min-width: 20px;
-    transition: all 500ms;
-}
-.vertical-text{
-    writing-mode: vertical-rl;
-    text-align: end;
-}
-.carousel.card:hover {
-    width: 300px;
 }
 
+.img-card {
+    border-radius: var(--corner-round);
+}
+
+
+/* carousel items */
 .item1 {
     color: var(--col-yellow);
     background: var(--col-red);
@@ -120,4 +143,8 @@ a {
 .item7 {
     color: var(--col-green);
     background: var(--col-purple)
+}
+
+#about-img {
+    filter:sepia() hue-rotate(90deg);
 }
