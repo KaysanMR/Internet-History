@@ -10,6 +10,7 @@
 
 :root {
     --col-black:#111;
+    --col-grey: #333;
     --col-white:#fefefe;
     --col-red: #E43636;
     --col-orange: #F84F19;
@@ -44,7 +45,6 @@ body {
     font-family: "Ibm Plex Mono", serif;
 
     display: grid;
-    grid-template-rows: 0.1fr 1.2fr 0.1fr;
 }
 
 body>*{
@@ -55,11 +55,24 @@ header {
     color: var(--col-black);
     background-color: var(--col-white);
 }
+header>h1{
+    font-size: 32px;
+}
 
+p{
+    font-size: 20px;
+}
 a {
     text-decoration: none;
 }
 
+h1 {
+    font-size: 64px;
+}
+
+.fullwidth {
+    grid-column: 1/4;
+}
 .flex {
     display: flex;
 }
@@ -89,7 +102,8 @@ a {
     border-radius: var(--corner-round);
     padding: 1rem var(--item-padding);
     flex:auto;
-    width: 10%;
+    width: 100px;
+    min-width: 80px;
     transition: all 500ms;
 }
 
@@ -106,6 +120,11 @@ a {
 
 .img-card {
     border-radius: var(--corner-round);
+}
+
+.about>.card {
+    color: var(--col-green);
+    background-color: var(--col-grey);
 }
 
 
@@ -147,4 +166,12 @@ a {
 
 #about-img {
     filter:sepia() hue-rotate(90deg);
+}
+
+/* media query */
+@media only screen and (max-width: 750px) 
+{
+.carousel {
+    flex-direction: column;
+}    
 }
