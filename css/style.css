@@ -51,6 +51,10 @@ header {
     background-color: var(--col-white);
 }
 
+a {
+    text-decoration: none;
+}
+
 .flex {
     display: flex;
 }
@@ -60,27 +64,26 @@ header {
 }
 
 .carousel {
-    margin: 20px 0 20px 0;
+    margin: 20px 0;
     flex-direction: row;
     gap: 8px;
     height: var(--carousel-height);
     justify-content: center;
 }
 
-.item {
+.card {
     background-color: var(--col-red);
     border-radius: var(--corner-round);
-    padding: var(--item-padding);
+    padding: 1rem var(--item-padding);
     flex:auto;
-    width: 1rem;
-
-    writing-mode: vertical-rl;
-    text-align: end;
-    font-size: 32px;
+    min-width: 20px;
     transition: all 500ms;
 }
-
-.item:hover {
+.vertical-text{
+    writing-mode: vertical-rl;
+    text-align: end;
+}
+.carousel.card:hover {
     width: 300px;
 }
 
