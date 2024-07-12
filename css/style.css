@@ -11,13 +11,13 @@
 --bg-col: #0a0a0a;
 --primary: #333;
 --secondary: #efefef;
---col-red: #e43636;
---col-orange: #f84f19;
---col-yellow: #f8ac19;
---col-green: #81e71b;
---col-lblue: #1bb6e7;
---col-dblue: #2745e4;
---col-purple: #aa17f0;
+--col-red: #ce4444;
+--col-orange: #e05f34;
+--col-yellow: #e49c0c;
+--col-green: #91e240;
+--col-lblue: #50b2cf;
+--col-dblue: #4543aa;
+--col-purple: #a55dc7;
 }
 /* fonts */
 .plex {
@@ -43,6 +43,10 @@ main {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--grid-gap);
+}
+
+.flex {
+    display: flex;
 }
 
 header {
@@ -77,11 +81,33 @@ header nav a:hover {
 .card {
     border-radius: 30px;
     flex: auto;
-    background: #ddd;
     transition: flex 400ms, background 500ms, box-shadow 500ms;
 }
 
-.container {
+/* accordion card colors */
+main > .container .card:nth-child(1) {
+    background: var(--col-red);
+}
+main > .container .card:nth-child(2) {
+    background: var(--col-lblue);
+}
+main > .container .card:nth-child(3) {
+    background: var(--col-yellow);
+}
+main > .container .card:nth-child(4) {
+    background: var(--col-dblue);
+}
+main > .container .card:nth-child(5) {
+    background: var(--col-orange);
+}
+main > .container .card:nth-child(6) {
+    background: var(--col-green);
+}
+main > .container .card:nth-child(7) {
+    background: var(--col-purple);
+}
+
+main > .container {
     grid-column: 2 / span 10;
     min-height: 350px;
     display:flex;
@@ -90,8 +116,7 @@ header nav a:hover {
 }
 
 .active {
-    background: var(--col-lblue);
-    flex-grow: 5;
+    flex-grow: 4;
 }
 
 h1.rotate {
@@ -102,6 +127,29 @@ h1.rotate {
 .about {
 
     grid-column: 4/span 6 ;
+}
+
+main .newsletter {
+    grid-column: 3 / span 8;
+    gap: var(--grid-gap);
+    align-items: center;
+
+    border-radius: var(--corner-radius);
+    background-color: var(--col-dblue);
+    color: var(--col-yellow);
+
+    padding: 2rem;
+    font-size: large;
+}
+
+main .newsletter button {
+    font-size: large;
+    font-weight: 800;
+    background-color: var(--col-yellow);
+    color: var(--col-dblue);
+    border: none;
+    padding: .8rem 1.25rem;
+    border-radius: 6px;
 }
 
 @media only screen and (max-width: 1000px) {
