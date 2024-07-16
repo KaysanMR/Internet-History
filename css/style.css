@@ -171,4 +171,23 @@ main .newsletter button {
         writing-mode: none;
     }
 }
-  
+
+footer {
+    color: var(--secondary);
+    padding: 1rem;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--col-yellow);
+}
+
+.sitemap {
+    padding: 5rem 10rem;
+    gap: 1rem;
+}
+
+.sitemap h2 {
+    grid-column: span 12;    
+}
