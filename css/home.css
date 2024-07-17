@@ -1,80 +1,76 @@
-.card {
-    border-radius: 30px;
-    flex: auto;
-    transition: flex 400ms, background 500ms, box-shadow 500ms;
+main {
+  padding-top: 5rem;
 }
 
 /* accordion card colors */
 main > .container .card:nth-child(1) {
-    background: var(--col-red);
+  background: var(--col-red);
 }
 main > .container .card:nth-child(2) {
-    background: var(--col-lblue);
+  background: var(--col-lblue);
 }
 main > .container .card:nth-child(3) {
-    background: var(--col-yellow);
+  background: var(--col-yellow);
 }
 main > .container .card:nth-child(4) {
-    background: var(--col-dblue);
+  background: var(--col-dblue);
 }
 main > .container .card:nth-child(5) {
-    background: var(--col-orange);
+  background: var(--col-orange);
 }
 main > .container .card:nth-child(6) {
-    background: var(--col-green);
+  background: var(--col-green);
 }
 main > .container .card:nth-child(7) {
-    background: var(--col-purple);
+  background: var(--col-purple);
 }
 
 main > .container {
-    grid-column: 2 / span 10;
-    min-height: 350px;
-    display:flex;
-    gap: 16px;
-    justify-content: space-between;
+  grid-column: 2 / span 10;
+  min-height: 350px;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
 }
 
 .active {
-    flex-grow: 4;
+  flex-grow: 4;
 }
 
 h1.rotate {
-    writing-mode: vertical-lr;
-    text-orientation: upright;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
 }
 
 .about {
-    padding: 5rem 0;
-    grid-column: 4/span 6 ;
+  padding: 5rem 0;
+  grid-column: 4 / span 6;
 }
 
 main .newsletter {
-    grid-column: 3 / span 8;
-    gap: var(--grid-gap);
-    align-items: center;
+  grid-column: 3 / span 8;
+  gap: var(--grid-gap);
+  align-items: center;
 
-    border-radius: var(--corner-radius);
-    background-color: var(--col-dblue);
-    color: var(--col-yellow);
+  border-radius: var(--corner-radius);
+  background-color: var(--col-dblue);
+  color: var(--col-yellow);
 
-    padding: 2rem;
-    font-size: large;
+  padding: 2rem;
+  font-size: large;
 }
 
 main .newsletter #newsletter-join {
-    font-size: large;
-    font-weight: 800;
-    background-color: var(--col-yellow);
-    color: var(--col-dblue);
-    border: none;
-    padding: .8rem 1.25rem;
-    border-radius: 6px;
-    transition: all 250ms;
+  font-size: large;
+  font-weight: 800;
+  background-color: var(--col-yellow);
+  color: var(--col-dblue);
+  border: none;
+  padding: 0.8rem 1.25rem;
+  border-radius: 6px;
+  transition: all 250ms;
 }
 
 main .newsletter #newsletter-join:hover {
-    transform: scale(1.05   );
+  transform: scale(1.05);
 }
-
-

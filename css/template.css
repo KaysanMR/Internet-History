@@ -1,0 +1,33 @@
+main {
+  margin: 5rem 20%;
+}
+
+.card {
+  grid-column: span 4;
+  background: #333;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.card h1,
+.card h2 {
+    font-size: 1.3rem;
+}
+
+.large {
+  grid-row-end: span 3;
+}
+
+.medium {
+  grid-row-end: span 2;
+}
+
+.small {
+  grid-row-end: span 1;
+}
+
+.wide {
+  grid-column: span 8;
+}

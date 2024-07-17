@@ -1,4 +1,3 @@
-
 const cards = document.querySelectorAll(".card");
 cards.forEach((el) => {
   el.addEventListener("mouseover", (e) => {
