@@ -2,29 +2,6 @@ main {
   padding-top: 5rem;
 }
 
-/* accordion card colors */
-main > .container .card:nth-child(1) {
-  background: var(--col-red);
-}
-main > .container .card:nth-child(2) {
-  background: var(--col-lblue);
-}
-main > .container .card:nth-child(3) {
-  background: var(--col-yellow);
-}
-main > .container .card:nth-child(4) {
-  background: var(--col-dblue);
-}
-main > .container .card:nth-child(5) {
-  background: var(--col-orange);
-}
-main > .container .card:nth-child(6) {
-  background: var(--col-green);
-}
-main > .container .card:nth-child(7) {
-  background: var(--col-purple);
-}
-
 main > .container {
   grid-column: 2 / span 10;
   min-height: 350px;
@@ -63,11 +40,13 @@ main .newsletter {
 main .newsletter #newsletter-join {
   font-size: large;
   font-weight: 800;
+
   background-color: var(--col-yellow);
   color: var(--col-dblue);
   border: none;
-  padding: 0.8rem 1.25rem;
   border-radius: 6px;
+
+  padding: 0.8rem 1.25rem;
   transition: all 250ms;
 }
 

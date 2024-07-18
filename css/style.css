@@ -13,19 +13,51 @@ img {
   --corner-radius: 30px;
 
   --bg-col: #0a0a0a;
-  --primary: #333;
+  --primary: #2c2b2b;
   --secondary: #efefef;
-  --col-red: #ce4444;
-  --col-orange: #e05f34;
-  --col-yellow: #e49c0c;
-  --col-green: #91e240;
+  --col-red: #cd2020;
+  --col-orange: #fa6d15;
+  --col-yellow: #e4b50c;
+  --col-green: #5ccd05;
   --col-lblue: #50b2cf;
-  --col-dblue: #4543aa;
-  --col-purple: #a55dc7;
+  --col-dblue: #2339ca;
+  --col-purple: #9c0ab9;
 }
+
+/* Colors */
+
+.red {
+  background: var(--col-red);
+  color: var(--secondary);
+}
+.blue {
+  background: var(--col-lblue);
+}
+.yellow {
+  background: var(--col-yellow);
+  color: var(--primary);
+}
+.dark-blue {
+  background: var(--col-dblue);
+  color: var(--col-yellow);
+}
+.orange {
+  background: var(--col-orange);
+  color: var(--col-green);
+}
+.green {
+  background: var(--col-green);
+  color: var(--col-purple);
+}
+.purple {
+  background: var(--col-purple);
+  color: var(--col-orange);
+}
+
 /* fonts */
 .plex {
   font-family: "IBM Plex Mono", monospace;
+  font-weight: 800;
 }
 
 .koulen {
@@ -37,6 +69,10 @@ body {
   background: var(--bg-col);
   color: var(--secondary);
   font-family: "Jost", sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 .grid {
@@ -71,6 +107,10 @@ header h1 {
   grid-column: span 6;
 }
 
+header h1 a {
+  color: var(--primary);
+}
+
 header nav {
   grid-column: span 6;
   justify-self: end;
@@ -99,13 +139,15 @@ footer a {
   color: var(--col-yellow);
 }
 
-.sitemap {
+.sitemap{
+  color: var(--secondary); 
   margin: 1rem 10rem;
   gap: 1rem;
 }
 
 .sitemap h2 {
   grid-column: span 12;
+  color: var(--secondary);
 }
 
 @media only screen and (max-width: 1000px) {

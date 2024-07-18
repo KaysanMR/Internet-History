@@ -1,31 +1,40 @@
 main {
-  margin: 5rem 20%;
+  margin: 5rem 15%;
 }
 
 .card {
   grid-column: span 4;
-  background: #333;
   border-radius: 12px;
-  padding: 20px;
+  padding: 4rem;
   transition: all 250ms;
   overflow: hidden;
+  font-size: 1.2rem;
+}
+
+main .card:nth-child(1) {
+  background: var();
 }
 
 .card h1,
 .card h2 {
-    font-size: 1.3rem;
+    font-size: 3rem;
+}
+
+.card h1 {
+  font-size: 14rem;
+  text-align: center;
 }
 
 .large {
-  grid-row-end: span 3;
+  grid-row-end: span 8;
 }
 
 .medium {
-  grid-row-end: span 2;
+  grid-row-end: span 4;
 }
 
 .small {
-  grid-row-end: span 1;
+  grid-row-end: span 2;
 }
 
 .wide {
