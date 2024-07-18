@@ -10,9 +10,9 @@ img {
 
 :root {
   --grid-gap: 1rem;
-  --corner-radius: 30px;
+  --corner-radius: 35px;
 
-  --bg-col: #0a0a0a;
+  --bg-col: #000000;
   --primary: #2c2b2b;
   --secondary: #efefef;
   --col-red: #cd2020;

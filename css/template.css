@@ -4,7 +4,7 @@ main {
 
 .card {
   grid-column: span 4;
-  border-radius: 12px;
+  border-radius: var(--corner-radius);
   padding: 4rem;
   transition: all 250ms;
   overflow: hidden;
