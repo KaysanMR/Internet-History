@@ -27,6 +27,14 @@ main {
   margin-bottom: 2rem;
 }
 
+.card > * {
+  transition: all 250ms;
+}
+
+.card > *:hover {
+  transform: scale(1.05);
+}
+
 .large {
   grid-row-end: span 8;
 }

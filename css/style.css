@@ -73,6 +73,8 @@ img {
 }
 
 body {
+  width: 100%;
+  height: 100dvh;
   background: var(--bg-col);
   color: var(--secondary);
   font-family: "Jost", sans-serif;
@@ -95,6 +97,7 @@ a {
 .card {
   border-radius: 30px;
   flex: auto;
+  overflow: hidden;
   transition: flex 400ms, background 500ms, box-shadow 500ms;
 }
 
@@ -178,7 +181,7 @@ footer a{
     min-height: 600px;
     flex-direction: column;
   }
-  h1.rotate {
-    writing-mode: none;
+  h1.vertical {
+    transform: none;
   }
 }
