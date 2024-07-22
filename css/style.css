@@ -14,14 +14,14 @@ img {
 
   --bg-col: #0e0e0e;
   --primary: #2c2b2b;
-  --secondary: #efefef;
-  --col-red: #cd2020;
-  --col-orange: #fa6d15;
-  --col-yellow: #e4b50c;
-  --col-green: #5ccd05;
-  --col-lblue: #50b2cf;
-  --col-dblue: #2339ca;
-  --col-purple: #9c0ab9;
+  --secondary: #F6F6F6;
+  --col-red: #E43636;
+  --col-orange: #F84F19;
+  --col-yellow: #F8AC19;
+  --col-green: #81E71B;
+  --col-lblue: #1BB6E7;
+  --col-dblue: #2745E4;
+  --col-purple: #AA17F0;
 }
 
 /* Colors */
@@ -47,7 +47,7 @@ img {
 }
 .green {
   background: var(--col-green);
-  color: var(--col-purple);
+  color: var(--primary);
 }
 .purple {
   background: var(--col-purple);
@@ -57,12 +57,19 @@ img {
 /* fonts */
 .plex {
   font-family: "IBM Plex Mono", monospace;
-  font-weight: 800;
+  font-style: normal;
 }
 
 .koulen {
   font-family: "Koulen", sans-serif;
   line-height: 1;
+}
+
+.jost {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 body {
