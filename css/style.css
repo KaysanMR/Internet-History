@@ -12,7 +12,7 @@ img {
   --grid-gap: 1rem;
   --corner-radius: 35px;
 
-  --bg-col: #000000;
+  --bg-col: #0e0e0e;
   --primary: #2c2b2b;
   --secondary: #efefef;
   --col-red: #cd2020;
@@ -134,20 +134,26 @@ footer {
   text-align: center;
 }
 
-footer a {
+footer p{
+  grid-column: span 12;
+}
+
+footer a{
   text-decoration: none;
   color: var(--col-yellow);
 }
 
 .sitemap{
-  color: var(--secondary); 
-  margin: 1rem 10rem;
-  gap: 1rem;
+  grid-column: span 12;
 }
 
 .sitemap h2 {
-  grid-column: span 12;
+  grid-column: span 2;
+}
+
+.sitemap a h3 {
   color: var(--secondary);
+  grid-column: span 3;
 }
 
 @media only screen and (max-width: 1000px) {
