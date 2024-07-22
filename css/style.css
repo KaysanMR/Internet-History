@@ -43,7 +43,7 @@ img {
 }
 .orange {
   background: var(--col-orange);
-  color: var(--col-green);
+  color: var(--primary);
 }
 .green {
   background: var(--col-green);
@@ -138,10 +138,10 @@ header nav a:hover {
 footer {
   margin: 1rem;
   color: var(--secondary);
-  text-align: center;
 }
 
 footer p{
+  text-align: center;
   grid-column: span 12;
 }
 
