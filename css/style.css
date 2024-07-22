@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-img {
-  width: 100%;
-}
-
 :root {
   --grid-gap: 1rem;
   --corner-radius: 35px;
