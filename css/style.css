@@ -28,6 +28,7 @@
 }
 .blue {
   background: var(--col-lblue);
+  color: var(--primary);
 }
 .yellow {
   background: var(--col-yellow);
@@ -39,7 +40,7 @@
 }
 .orange {
   background: var(--col-orange);
-  color: var(--primary);
+  color: var(--col-yellow);
 }
 .green {
   background: var(--col-green);
@@ -47,7 +48,7 @@
 }
 .purple {
   background: var(--col-purple);
-  color: var(--col-orange);
+  color: var(--col-green);
 }
 
 /* fonts */
@@ -163,6 +164,11 @@ footer a{
 }
 
 @media only screen and (max-width: 1000px) {
+
+  :root {
+    font-size: 8px;
+  }
+
   header h1 {
     font-size: 26px;
   }
@@ -177,7 +183,8 @@ footer a{
     min-height: 600px;
     flex-direction: column;
   }
-  h1.vertical {
-    transform: none;
+
+  grid {
+    grid-template-columns: repeat(8, 1fr);
   }
 }
