@@ -42,7 +42,7 @@ img {
   transform: scale(1.05);
 }
 
-.title {
+.smallest {
   grid-row-end: span 1;
 }
 
