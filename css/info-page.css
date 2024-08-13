@@ -11,7 +11,7 @@ img {
 .card {
   grid-column: span 4;
   border-radius: var(--corner-radius);
-  padding: 4rem;
+  padding: 3rem;
   transition: all 250ms;
   overflow: hidden;
   font-size: 1.2rem;

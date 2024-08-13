@@ -72,9 +72,10 @@
 
 body {
   width: 100%;
-  height: 100dvh;
   background: var(--bg-col);
   color: var(--secondary);
+
+  font-size: 1.2em;
   font-family: "Jost", sans-serif;
 }
 
