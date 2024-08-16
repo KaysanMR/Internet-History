@@ -60,7 +60,6 @@
 
 .koulen {
   font-family: "Koulen", sans-serif;
-  line-height: 1;
 }
 
 .jost {
@@ -71,11 +70,12 @@
 }
 
 body {
-  width: 100%;
+  width: 100dvw;
+  height: 100dvh;
+
   background: var(--bg-col);
   color: var(--secondary);
 
-  font-size: 1.2em;
   font-family: "Jost", sans-serif;
 }
 
@@ -105,7 +105,10 @@ a {
 }
 
 header {
+  z-index: 1; /*render header on top*/
   height: 80px;
+  width: 100%;
+
   padding: 0 40px;
   background: var(--secondary);
   color: var(--primary);
@@ -137,9 +140,19 @@ header nav a:hover {
   transition: font-weight 250ms;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + * {
+  margin-top: 90px;
+}
+
 footer {
-  margin: 1rem;
   color: var(--secondary);
+  padding: 1rem 0
 }
 
 footer p{
@@ -153,11 +166,12 @@ footer a{
 }
 
 .sitemap{
-  grid-column: span 12;
+  padding: 0 20%;
+  margin: 5dvh 0;
 }
 
 .sitemap h2 {
-  grid-column: span 2;
+  grid-column: span 4;
 }
 
 .sitemap a h3 {
@@ -165,28 +179,14 @@ footer a{
   grid-column: span 3;
 }
 
-@media only screen and (max-width: 1000px) {
+.sitemap ul {
+  list-style: none;
+}
 
-  :root {
-    font-size: 8px;
-  }
+.decades {
+  grid-column: span 3;
+}
 
-  header h1 {
-    font-size: 26px;
-  }
-
-  header nav {
-    display: none;
-  }
-  body {
-    margin: 0 5%;
-  }
-  .container {
-    min-height: 600px;
-    flex-direction: column;
-  }
-
-  grid {
-    grid-template-columns: repeat(8, 1fr);
-  }
+.other-links {
+  grid-column: span 3;
 }

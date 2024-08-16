@@ -4,9 +4,10 @@ main {
 
 main > .container {
   grid-column: 2 / span 10;
-  min-height: 350px;
+  height: 400px;
+
   display: flex;
-  gap: 16px;
+  gap: 1em;
   justify-content: space-between;
 }
 
@@ -15,58 +16,60 @@ main > .container {
 }
 
 .card h1.vertical {
-  transform: rotate(-90deg) translate(-275px, 65px);
+  transform: rotate(-90deg) translate(-245px, 4.5dvw);
   width: 0px;
-  font-size: 100px;
+  font-size: 9rem;
 }
 
 p.hide {
-  font-size: 32px;
+  font-size: 1.8cqw;
   width: 0px;
   text-wrap: nowrap;
-  position: relative;
-  bottom: -180px;
-  left: 120px;
+
+  transform: translate(8cqw, 80px);
+
   visibility: collapse;
   transition: all 250ms;
 }
 
 .active > p.hide{
-  width: 250px;
   visibility: visible;
 }
 
 .about {
-  padding: 5rem 0;
   grid-column: 4 / span 6;
+  margin: 5rem 0;
 }
 
+.about h1 {
+  padding-bottom: 2rem;
+}
 main .newsletter {
   grid-column: 3 / span 8;
   gap: var(--grid-gap);
   align-items: center;
 
+  border: none;
   border-radius: var(--corner-radius);
   background-color: var(--col-dblue);
   color: var(--col-yellow);
 
   padding: 2rem;
   font-size: large;
+  transition: all 250ms;
 }
 
 main .newsletter #newsletter-join {
   font-size: large;
   font-weight: 800;
 
-  background-color: var(--col-yellow);
-  color: var(--col-dblue);
-  border: none;
   border-radius: 6px;
-
+  
   padding: 0.8rem 1.25rem;
-  transition: all 250ms;
 }
 
-main .newsletter #newsletter-join:hover {
+main .newsletter:hover {
+  background-color: var(--col-yellow);
+  color: var(--col-dblue);
   transform: scale(1.05);
 }
