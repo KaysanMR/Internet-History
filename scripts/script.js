@@ -1,3 +1,5 @@
+
+//Home page cards animation
 const cards = document.querySelectorAll(".card");
 cards.forEach((el) => {
   el.addEventListener("mouseover", (e) => {
@@ -24,4 +26,56 @@ function myFunction() {
   } else {
     header.classList.remove("sticky");
   }
+}
+
+
+//Contact form validation
+function validateForm() {
+  let isValid = true;
+
+  // Clear previous error messages
+  document.getElementById("nameError").innerText = "";
+  document.getElementById("emailError").innerText = "";
+  document.getElementById("subjectError").innerText = "";
+  document.getElementById("messageError").innerText = "";
+
+  // Regular Expressions
+  const nameRegex = /^[a-zA-Z\s]{3,}$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const subjectRegex = /^.{3,50}$/;
+  const messageRegex = /^.{10,500}$/;
+
+  // Name Validation
+  const name = document.getElementById("name").value;
+  if (!nameRegex.test(name)) {
+    document.getElementById("nameError").innerText =
+      "Name must be at least 3 characters and only contain letters and spaces.";
+    isValid = false;
+  }
+
+  // Email Validation
+  const email = document.getElementById("email").value;
+  if (!emailRegex.test(email)) {
+    document.getElementById("emailError").innerText =
+      "Please enter a valid email address.";
+    isValid = false;
+  }
+
+  // Subject Validation
+  const subject = document.getElementById("subject").value;
+  if (!subjectRegex.test(subject)) {
+    document.getElementById("subjectError").innerText =
+      "Subject must be between 3 and 50 characters.";
+    isValid = false;
+  }
+
+  // Message Validation
+  const message = document.getElementById("message").value;
+  if (!messageRegex.test(message)) {
+    document.getElementById("messageError").innerText =
+      "Message must be between 10 and 500 characters.";
+    isValid = false;
+  }
+
+  return isValid;
 }

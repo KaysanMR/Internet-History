@@ -73,3 +73,13 @@ main .newsletter:hover {
   color: var(--col-dblue);
   transform: scale(1.05);
 }
+
+/* Contact Form */
+
+#contactForm {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: repeat(5, 1fr);
+
+  grid-column: span 2;
+}
