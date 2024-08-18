@@ -57,6 +57,30 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//Card hover effect
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (event) => {
+      const { offsetWidth: width, offsetHeight: height } = card;
+      const { clientX: mouseX, clientY: mouseY } = event;
+      const { left, top } = card.getBoundingClientRect();
+
+      const x = ((mouseX - left) / width) * 3 - 1;
+      const y = ((mouseY - top) / height) * 3 - 1;
+
+      card.style.transform = `rotateX(${y * 10}deg) rotateY(${x * -10}deg)`;
+      card.classList.add('tilt-tilted');
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+      card.classList.remove('tilt-tilted');
+    });
+  });
+});
+
 //Contact form validation
 function validateForm() {
   let isValid = true;

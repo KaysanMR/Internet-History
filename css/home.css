@@ -11,14 +11,14 @@ main > .container {
   flex-grow: 4;
 }
 
-.card h1.vertical {
+.card .vertical {
   transform: rotate(-90deg) translate(-245px, 4.5dvw);
   width: 0px;
   font-size: 9rem;
 }
 
 p.hide {
-  font-size: 1.8cqw;
+  font-size: 1.5rem;
   width: 0px;
   text-wrap: nowrap;
 
@@ -46,6 +46,7 @@ p.hide {
 .about h1 {
   padding-bottom: 2rem;
 }
+
 main .newsletter {
   grid-column: 3 / span 8;
   gap: var(--grid-gap);

@@ -113,9 +113,20 @@ a {
 .card {
   padding: 1rem;
   border-radius: 30px;
+  
   flex: auto;
   overflow: hidden;
-  transition: flex 400ms, background 500ms, box-shadow 500ms;
+
+  transition: flex 200ms ease-in-out, transform 100ms;
+}
+
+.card.tilt {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.05);
+
+}
+
+.card.tilt-tilted {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .nopad {

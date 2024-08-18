@@ -1,5 +1,6 @@
 main {
   margin: 0 10%;
+  font-size: large;
 }
 
 img {
@@ -61,9 +62,9 @@ img {
   transition: all 250ms;
 }
 
-.card > *:hover {
+/* .card > *:hover {
   transform: scale(1.05);
-}
+} */
 
 .smallest {
   grid-row-end: span 1;
