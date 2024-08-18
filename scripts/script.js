@@ -71,12 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const y = ((mouseY - top) / height) * 3 - 1;
 
       card.style.transform = `rotateX(${y * 10}deg) rotateY(${x * -10}deg)`;
-      card.classList.add('tilt-tilted');
     });
 
     card.addEventListener('mouseleave', () => {
       card.style.transform = 'rotateX(0deg) rotateY(0deg)';
-      card.classList.remove('tilt-tilted');
     });
   });
 });

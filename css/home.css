@@ -139,6 +139,7 @@ input[type="submit"]:hover {
 /* About Page */
 
 section {
+  margin: 100px;
   grid-template-columns: subgrid;
   grid-column: 4 / span 6;
 }
@@ -150,5 +151,11 @@ section .card {
 
 ul {
   grid-column: 5 / span 5;
-  padding: 1rem 0 1rem 5rem;
+}
+
+.info-container {
+  padding: 2rem 0;
+  grid-column: 4 / span 6;
+  display: flex;
+  justify-content: center;
 }
