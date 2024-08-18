@@ -12,7 +12,7 @@ main > .container {
 }
 
 .card .vertical {
-  transform: rotate(-90deg) translate(-245px, 4.5dvw);
+  transform: rotate(-90deg) translate(-245px, 3.5dvw);
   width: 0px;
   font-size: 9rem;
 }
@@ -80,6 +80,7 @@ main .newsletter:hover {
 /* Contact Form */
 
 main .formHeader {
+  margin-top: 3rem;
   grid-column: 5 / span 4;
 }
 
@@ -139,7 +140,11 @@ input[type="submit"]:hover {
 /* About Page */
 
 section {
-  margin: 100px;
+  padding: 3rem;
+  margin: 100px 0;
+
+  border-radius: var(--corner-radius);
+
   grid-template-columns: subgrid;
   grid-column: 4 / span 6;
 }
@@ -154,7 +159,7 @@ ul {
 }
 
 .info-container {
-  padding: 2rem 0;
+  padding: 0 0 2rem 0;
   grid-column: 4 / span 6;
   display: flex;
   justify-content: center;
