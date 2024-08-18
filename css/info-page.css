@@ -1,11 +1,35 @@
 main {
-  margin: 5rem 10%;
+  margin: 0 10%;
 }
 
 img {
   width: 100%;
   display: block;
   object-fit: cover;
+}
+
+.page-nav ul{
+  margin: 1rem 10%;
+  grid-column: 2 / span 8;
+  
+  display: flex;
+  flex-direction: row;
+  gap: var(--grid-gap);
+  
+  transition: all 250ms;
+}
+
+.page-nav li {
+  list-style: none;
+}
+
+.page-nav li a {
+  font-size: 1.6rem;
+  color: var(--col-yellow);
+}
+
+.page-nav ul > *:hover {
+  transform: scale(1.05);
 }
 
 .card {

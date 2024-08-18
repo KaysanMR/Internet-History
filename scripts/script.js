@@ -11,16 +11,16 @@ cards.forEach((el) => {
 });
 
 // When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {stickHeader()};
 
 // Get the header
-var header = document.getElementById("Header");
+const header = document.querySelector("header");
 
 // Get the offset position of the navbar
 var sticky = header.offsetTop;
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
+function stickHeader() {
   if (window.scrollY > sticky) {
     header.classList.add("sticky");
   } else {
@@ -28,6 +28,34 @@ function myFunction() {
   }
 }
 
+//Page transition animation
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll("a");
+  const mainElement = document.querySelector("main");
+  console.log(mainElement)
+
+  // Ensure the main element fades in when the new page loads
+  if (mainElement) {
+    mainElement.classList.toggle("fade-in", true);
+  }
+
+  links.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent default link behavior
+
+      // Add fade-out class to the main element
+      if (mainElement) {
+        mainElement.classList.add("fade-out");
+        mainElement.classList.remove("fade-in");
+
+        // Wait for the fade-out animation to complete before navigating
+        setTimeout(() => {
+          window.location.href = this.href;
+        }, 250); // Adjust timing to match fade-out duration
+      }
+    });
+  });
+});
 
 //Contact form validation
 function validateForm() {

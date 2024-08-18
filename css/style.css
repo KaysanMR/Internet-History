@@ -11,6 +11,7 @@
   --bg-col: #0e0e0e;
   --primary: #2c2b2b;
   --secondary: #F6F6F6;
+  --col-grey: #222;
   --col-red: #E43636;
   --col-orange: #F84F19;
   --col-yellow: #F8AC19;
@@ -79,6 +80,22 @@ body {
   font-family: "Jost", sans-serif;
 }
 
+main {
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+  
+  padding-bottom: 10dvh;
+}
+
+main.fade-in {
+  opacity: 1; /* Fade in when page loads */
+}
+
+main.fade-out {
+  opacity: 0;
+  transform: translate(0, 10dvh);
+}
+
 a {
   text-decoration: none;
 }
@@ -94,6 +111,7 @@ a {
 }
 
 .card {
+  padding: 1rem;
   border-radius: 30px;
   flex: auto;
   overflow: hidden;
@@ -147,10 +165,17 @@ header nav a:hover {
 }
 
 .sticky + * {
-  margin-top: 90px;
+  margin-top: 100px;
 }
 
 footer {
+  background: var(--bg-col);
+  width: 100dvw;
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
   color: var(--secondary);
   padding: 1rem 0
 }
